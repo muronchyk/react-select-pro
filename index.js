@@ -1,3 +1,3 @@
 module.exports = function() {
-  console.log("hello npm");
+  console.log('hello npm');
 };
