@@ -2,9 +2,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: [path.resolve(__dirname, 'src/shared/index.js')],
+  entry: [path.resolve(__dirname, '../src/shared/index.js')],
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'index.js'
   },
   mode: 'production',
