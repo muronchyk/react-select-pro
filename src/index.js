@@ -5,4 +5,9 @@ import './styles.scss';
 const root = document.createElement('div');
 document.querySelector('body').appendChild(root);
 
-ReactDOM.render(<div />, root);
+ReactDOM.render(
+  <div>
+    <h1>Hello JS!</h1>
+  </div>,
+  root
+);
