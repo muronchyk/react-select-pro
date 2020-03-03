@@ -20,7 +20,7 @@
     "url": "https://github.com/muronchyk/react-select-pro/issues"
   },
   "homepage": "https://github.com/muronchyk/react-select-pro#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
