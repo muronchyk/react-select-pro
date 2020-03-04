@@ -1,6 +1,8 @@
 /node_modules/
+.babelrc
 /src
 /public
 /.github
+/config
 LICENSE
 README.md

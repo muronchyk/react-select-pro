@@ -1,4 +1,4 @@
-const abc = require('./dist/react-select-pro.cjs.js');
+const abc = require('./dist');
 
 module.exports = (function() {
   console.log('abc: ', abc);
