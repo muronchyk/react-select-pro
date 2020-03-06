@@ -3,7 +3,7 @@ const externals = require('webpack-node-externals');
 const path = require('path');
 
 module.exports = {
-  entry: [path.resolve(__dirname, '../src/shared/index.js')],
+  entry: [path.resolve(__dirname, '../shared/index.tsx')],
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'index.js',
@@ -28,7 +28,16 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        test: /\.ts(x?)$/,
+        include: path.resolve(__dirname, '../shared'),
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader'
+          }
+        ]
+      },
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
