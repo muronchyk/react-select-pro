@@ -1,4 +1,5 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const externals = require('webpack-node-externals');
 const path = require('path');
 
 module.exports = {
@@ -6,9 +7,25 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'index.js',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'commonjs2'
   },
   mode: 'production',
+  target: 'node',
+  externals: [externals()],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        exclude: /node_modules/,
+        terserOptions: {
+          output: {
+            comments: false
+          }
+        },
+        extractComments: false
+      })
+    ]
+  },
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
@@ -17,6 +34,5 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
-  },
-  plugins: [new UglifyJsPlugin()]
+  }
 };
