@@ -1,7 +1,9 @@
 /node_modules/
 /src
 /.github
+/.vscode
 /config
 tsconfig.json
 tsconfig.dev.json
 tsconfig.prod.json
+.prettierrc

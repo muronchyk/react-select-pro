@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.scss';
 
-import SelectPro, { aaa } from '../dist';
+import SelectPro from './common';
 
 const root = document.createElement('div');
 document.querySelector('body').appendChild(root);
 
-ReactDOM.render(<SelectPro className="lol" />, root);
+ReactDOM.render(<SelectPro />, root);

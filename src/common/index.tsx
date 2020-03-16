@@ -1,17 +1,12 @@
 import React from 'react';
 import './styles.scss';
 
-interface ISelectProps {
-  className: string;
+interface SelectProps {
+    className?: string;
 }
 
-export const aaa = () => {
-  console.log('aaa');
-};
-
-aaa();
-const SelectPro: React.FC<ISelectProps> = props => {
-  return <div className={props.className}>THE SELECT PRO IS HERE!!!</div>;
+const SelectPro: React.FC<SelectProps> = props => {
+    return <div className={props.className}>THE SELECT PRO IS HERE!!!</div>;
 };
 
 export default SelectPro;
