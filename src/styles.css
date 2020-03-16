@@ -1,0 +1,17 @@
+@import './styles/fonts.css';
+@import './styles/colors.css';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.2;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
