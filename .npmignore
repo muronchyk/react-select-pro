@@ -1,8 +1,7 @@
 /node_modules/
-.babelrc
 /src
-/public
 /.github
 /config
-LICENSE
-README.md
+tsconfig.json
+tsconfig.dev.json
+tsconfig.prod.json
