@@ -1,2 +1,10 @@
-div {
+.select {
+    display: flex;
+    flex-direction: column;
+
+    &-input {
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+    }
 }
