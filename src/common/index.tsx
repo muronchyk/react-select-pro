@@ -37,6 +37,8 @@ const SelectPro = ({
 }: SelectProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
 
+    console.log('sample');
+
     const [inputValue, setInputValue] = useState('');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
